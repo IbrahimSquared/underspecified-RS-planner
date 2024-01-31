@@ -31,7 +31,11 @@ The path lengths were computed using our proposed accelerated Reeds-Shepp planne
 Generated for a randomly chosen $\theta_{0}$. <br>
 ![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/omega_values.png) <br>
 
-## How to Use
+## How to Use (To be completed)
+Set compiler path if needed, make sure SFML libraries are installed, then: <br>
+``` mkdir build && cd build ``` <br>
+``` cmake .. ``` <br>
+``` make ```
 
 To use this project, follow these simple steps:
 
