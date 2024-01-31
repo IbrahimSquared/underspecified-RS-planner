@@ -14,3 +14,15 @@ $$
 $$
 
 In this code, we provide the solution for this problem that is based on the paper we submitted: (TBD).
+
+# Sample solution
+Solved for a $1000\times{}1000$ grid map with the start configuration $p_{0} = (500,500,\frac{\pi}{2})$ and with a radius $r = 400$. <br>
+
+## $\Omega$ solution
+![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/samples/omega_values_M_cb.png) <br>
+
+## Corresponding computed path lengths 
+We computed path lengths for all pairs $p_{0}, p_{f_{i,j}}$ where $(i,j) \in N\times{}M$ grid.
+![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/samples/omega_values_M_cb.png) <br>
+
+The path lengths were computed using our proposed accelerated Reeds-Shepp planner that runs an order of magnitude faster than state-of-the-art.
