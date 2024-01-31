@@ -75,7 +75,7 @@ int main() {
   std::mt19937 gen(rd());
   std::uniform_real_distribution<> dis(-pi, pi);
   // const double theta0 = 15 * pi / 180;
-  const double theta0 = 0; // dis(gen);
+  const double theta0 = dis(gen);
 
   const int nx = 1000;
   const int ny = 1000;
