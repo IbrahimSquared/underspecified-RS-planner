@@ -30,3 +30,9 @@ The path lengths were computed using our proposed accelerated Reeds-Shepp planne
 ## Sample $\Omega^{N\times{}M}$ image generated using SFML in C++
 Generated for a randomly chosen $\theta_{0}$. <br>
 ![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/omega_values.png) <br>
+
+## How to Use
+
+To use this project, follow these simple steps:
+
+1. Clone the repository:
