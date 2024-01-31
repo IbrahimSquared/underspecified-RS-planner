@@ -28,5 +28,5 @@ We computed path lengths for all pairs $(p_{0}, p_{f_{i,j}})$ where $(i,j) \in N
 The path lengths were computed using our proposed accelerated Reeds-Shepp planner that runs an order of magnitude faster than state-of-the-art.
 
 ## Sample $\Omega^{N\times{}M}$ image generated using SFML in C++
-Generated for a randomly chosen $theta_{0}$. <br>
+Generated for a randomly chosen $\theta_{0}$. <br>
 ![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/omega_values.png) <br>
