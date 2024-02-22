@@ -90,10 +90,7 @@ int main() {
   int condition = 0;
   for (int i = 0; i < nx; ++i) {
     for (int j = 0; j < ny; ++j) {
-      const double xn = (i - x0) * cos(theta0) + (j - y0) * sin(theta0) + x0;
-      const double yn = -(i - x0) * sin(theta0) + (j - y0) * cos(theta0) + y0;
-
-      urs.getOmega(x0, y0, xn, yn, r, omega);
+      urs.getOmega(x0, y0, i, j, r, theta0, omega);
       omega_values[i][ny - j - 1] = omega + theta0;
     }
   }

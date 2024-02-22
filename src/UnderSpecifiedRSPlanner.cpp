@@ -7,8 +7,13 @@ using namespace std::numbers;
 /*****************************************************************************/
 /*****************************************************************************/
 void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
-                                       const double xn, const double yn,
-                                       const double r, double &omega) const {
+                                       const double xf, const double yf,
+                                       const double r, const double theta,
+                                       double &omega) const {
+  // rotate to the local frame
+  const double xn = (xf - x0) * cos(theta) + (yf - y0) * sin(theta) + x0;
+  const double yn = -(xf - x0) * sin(theta) + (yf - y0) * cos(theta) + y0;
+
   // centers of left and right side circles
   // cxr0 = x0 + r * cos(theta0) with theta0 fixed pi/2 implicit, etc.
   const double cxr0 = x0 + r;

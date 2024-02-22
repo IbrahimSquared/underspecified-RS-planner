@@ -10,7 +10,8 @@ class UnderSpecifiedRSPlanner {
 public:
   UnderSpecifiedRSPlanner() = default;
   void getOmega(const double x0, const double y0, const double xn,
-                const double yn, const double r, double &omega) const;
+                const double yn, const double r, const double theta,
+                double &omega) const;
   inline void case1(const double x0, const double y0, const double xn,
                     const double yn, const double r, double &omega) const;
   inline void case2(const double x0, const double y0, const double xn,
@@ -21,8 +22,10 @@ public:
 private:
   inline const double get2norm(const double x1, const double y1,
                                const double x2, const double y2) const;
-  // Constant expressions
+
+  // Constant expression, fixed theta0 for the solution
   static constexpr double theta0 = std::numbers::pi / 2;
+
   static constexpr cdouble i = cdouble(0, 1.0);
 
   // static constexpr cdouble expThetaI = cdouble(0, 1.0);
