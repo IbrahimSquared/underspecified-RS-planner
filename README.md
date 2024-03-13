@@ -32,7 +32,9 @@ Generated for a randomly chosen $\theta_{0}$. <br>
 ![alt text](https://github.com/IbrahimSquared/underspecified-RS-planner/blob/main/omega_values.png) <br>
 
 ## How to Use (To be completed)
-Set compiler path if needed, make sure SFML libraries are installed, then: <br>
+Set compiler path if needed, make sure SFML libraries (libsfml-dev) are installed, then: <br>
+``` sudo apt install cmake ``` <br>
+``` sudo apt install g++ ``` <br>
 ``` mkdir build && cd build ``` <br>
 ``` cmake .. ``` <br>
 ``` make ```
