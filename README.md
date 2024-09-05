@@ -6,12 +6,13 @@ By solving the under-specified Reeds-Shepp problem, we endow the robot with the 
 
 Using the computed $\theta_{f}^{N\times{}M}$, we can compute a shortest-distance transform in the style of Euclidian distance transforms for the grid. The latter is symmetrical and rotationally invariant in its local frame for a fixed radius $r$, so it can be computed once and stored offline and it can be interpolated at any point. 
 
-$\Omega$, therefore, may be defined as the final configuration angle that results in the shortest possible path length $\forall \theta_{f}$ in $[-\pi,\pi)$, given $(x_{f}, y_{f})$ and $p_{0}$.
-Let $\mathcal{S}$ be the set of all possible paths for all $\theta_{f}$ in $[-\pi,\pi)$ given $p_{0}$ and $(x_{f}, y_{f})$. As such, $\Omega$ may be computed as:
+Given an initial configuration $p_{0} = (x_{0}, y_{0}, \theta_{0})$ and a final position $(x_{f}, y_{f})$ with an unspecified final orientation $\theta_{f}$, the goal is to find the final orientation $\Omega$ such that the resulting Reeds-Shepp path from $p_{0}$ to the final configuration $p_{f} = (x_{f}, y_{f}, \Omega)$ is the shortest possible. Formally, $\Omega$ is defined as:
 
 $$ 
-\Omega =  \underset{\theta_{f} \in [-\pi,\pi)}{\mathrm{argmin}} \int_{p_{0}}^{p_{f}} | P'(t) | dt \quad \forall P \in \mathcal{S}.
+\Omega =  \underset{\theta_{f} \in [-\pi,\pi)}{\mathrm{argmin}} L(p_{0}, (x_{f}, y_{f}, \theta_{f})).
 $$
+
+where $L(p_{0}, (x_{f}, y_{f}, \theta_{f}))$ represents the length of the Reeds-Shepp path from the initial configuration $p_{0}$ to the final configuration $(x_{f}, y_{f}, \theta_{f})$. The objective is to determine $\theta_{f}$ such that the path length is minimized.
 
 In this code, we provide the solution for this problem that is based on the paper we submitted: (TBD).
 
