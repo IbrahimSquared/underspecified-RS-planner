@@ -111,8 +111,6 @@ int main() {
   UnderSpecifiedRSPlanner urs;
 
   double omega = 0;
-  double d = 0;
-  int condition = 0;
   for (int i = 0; i < nx; ++i) {
     for (int j = 0; j < ny; ++j) {
       urs.getOmega(x0, y0, i, j, r, theta0, omega);
