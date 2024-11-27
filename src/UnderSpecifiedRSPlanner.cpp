@@ -26,10 +26,10 @@ void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
 
   if (xn >= x0 && yn >= y0) {
     // Q1
-    if ((d1 >= r) && (yn >= r + y0 | xn - cxr0 < 0)) {
+    if ((d1 >= r) && ((yn >= r + y0) | (xn - cxr0 < 0))) {
       case1(x0, y0, xn, yn, r, omega);
       omega = theta0 - omega;
-    } else if ((d2 >= sqrt(5) * r) && (yn < r + y0 && xn - cxr0 > 0)) {
+    } else if ((d2 >= sqrt(5) * r) && ((yn < r + y0) && (xn - cxr0 > 0))) {
       case2(x0, y0, xn, yn, r, omega);
       omega = theta0 - (pi - omega);
     } else if ((d2 < sqrt(5) * r) && (d1 <= r)) {
@@ -43,10 +43,10 @@ void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
     }
     // Q2
   } else if (xn <= x0 && yn >= y0) {
-    if ((d2 >= r) && (yn >= r + y0 | xn - cxl0 > 0)) {
+    if ((d2 >= r) && ((yn >= r + y0) | (xn - cxl0 > 0))) {
       case1(xn, y0, x0, yn, r, omega);
       omega = theta0 + omega;
-    } else if ((d1 >= sqrt(5) * r) && (yn <= r + y0 && xn - cxl0 < 0)) {
+    } else if ((d1 >= sqrt(5) * r) && ((yn <= r + y0) && (xn - cxl0 < 0))) {
       case2(xn, y0, x0, yn, r, omega);
       omega = theta0 + (pi - omega);
     } else if ((d1 <= sqrt(5) * r) && (d2 <= r)) {
@@ -60,7 +60,7 @@ void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
     }
     // Q3
   } else if (xn <= x0 && yn <= y0) {
-    if ((d2 >= r) && (yn <= y0 - r | xn - cxl0 > 0)) {
+    if ((d2 >= r) && ((yn <= y0 - r) | (xn - cxl0 > 0))) {
       case1(xn, yn, x0, y0, r, omega);
       omega = theta0 - omega;
     } else if ((d1 >= sqrt(5) * r) && (yn >= y0 - r && xn - cxl0 < 0)) {
@@ -78,7 +78,7 @@ void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
     }
     // Q4
   } else if (xn >= x0 && yn <= y0) {
-    if ((d1 >= r) && (yn <= y0 - r | xn - cxr0 < 0)) {
+    if ((d1 >= r) && ((yn <= y0 - r) | (xn - cxr0 < 0))) {
       case1(x0, yn, xn, y0, r, omega);
       omega = theta0 + omega;
     } else if ((d2 >= sqrt(5) * r) && (yn >= y0 - r && xn - cxr0 > 0)) {
