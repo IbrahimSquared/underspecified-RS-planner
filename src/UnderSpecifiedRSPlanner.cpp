@@ -170,9 +170,9 @@ inline void UnderSpecifiedRSPlanner::case3(const double x0, const double y0,
 /*****************************************************************************/
 /*****************************************************************************/
 /*****************************************************************************/
-inline const double UnderSpecifiedRSPlanner::get2norm(const double x1,
-                                                      const double y1,
-                                                      const double x2,
-                                                      const double y2) const {
+inline double UnderSpecifiedRSPlanner::get2norm(const double x1,
+                                                const double y1,
+                                                const double x2,
+                                                const double y2) const {
   return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 }

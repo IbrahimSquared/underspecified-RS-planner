@@ -20,8 +20,8 @@ public:
                     const double yn, const double r, double &gamma) const;
 
 private:
-  inline const double get2norm(const double x1, const double y1,
-                               const double x2, const double y2) const;
+  inline double get2norm(const double x1, const double y1, const double x2,
+                         const double y2) const;
 
   // Constant expression, fixed theta0 for the solution
   static constexpr double theta0 = std::numbers::pi / 2;
