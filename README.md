@@ -1,5 +1,7 @@
 # Under-specified Reeds-Shepp Planning
 
+[Paper: IEEE T-RO](https://doi.org/10.1109/TRO.2025.3554406)
+
 Consider the scenario where a car-like robot begins at a certain configuration $p_{0} = (x_{0}, y_{0}, \theta_{0})$ in an $N\times{}M$ grid.
 
 By solving the under-specified Reeds-Shepp problem, we endow the robot with the knowledge of the ending orientations $\theta_{f}^{N\times{}M}$ that produce the shortest paths to all grid cells. This allows the robot to move anywhere in the grid, always at a minimum-distance basis.
