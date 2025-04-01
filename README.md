@@ -16,7 +16,7 @@ $$
 
 where $L(p_{0}, (x_{f}, y_{f}, \theta_{f}))$ represents the length of the Reeds-Shepp path from the initial configuration $p_{0}$ to the final configuration $(x_{f}, y_{f}, \theta_{f})$. The objective is to determine $\theta_{f}$ such that the path length is minimized.
 
-In this code, we provide the solution for this problem that is based on the paper we submitted: (TBD).
+In this code, we provide the solution for this problem that is based on the paper published in IEEE T-RO.
 
 # Sample solution
 
