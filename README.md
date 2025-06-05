@@ -20,7 +20,7 @@ In this code, we provide the solution for this problem that is based on the pape
 
 # Sample solution
 
-Solved for a $1000\times{}1000$ grid map with the start configuration $p_{0} = (500,500,\frac{\pi}{2})$ and with a radius $r = 400$. <br>
+Solved for a $1000\times{}1000$ grid map with the start configuration $p_{0} = (500,500,\pi}$ and with a radius $r = 200$. <br>
 
 ## $\Omega^{N\times{}M}$ solution
 
