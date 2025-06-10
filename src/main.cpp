@@ -113,8 +113,8 @@ int main() {
   double omega = 0;
   for (int i = 0; i < nx; ++i) {
     for (int j = 0; j < ny; ++j) {
-      urs.getOmega(x0, y0, i, j, r, theta0, omega);
-      omega_values[i][ny - j - 1] = omega + theta0;
+      urs.getOmega(x0, y0, i, j, r, theta0, omega, true);
+      omega_values[i][ny - j - 1] = omega + theta0 - pi / 2.0;
     }
   }
   saveResultImage(omega_values, "omega_values.png");
