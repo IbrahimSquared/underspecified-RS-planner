@@ -11,7 +11,7 @@ public:
   UnderSpecifiedRSPlanner() = default;
   void getOmega(const double x0, const double y0, const double xn,
                 const double yn, const double r, const double theta,
-                double &omega) const;
+                double &omega, const bool offset) const;
   inline void case1(const double x0, const double y0, const double xn,
                     const double yn, const double r, double &omega) const;
   inline void case2(const double x0, const double y0, const double xn,
