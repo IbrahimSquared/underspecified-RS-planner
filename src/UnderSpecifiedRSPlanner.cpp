@@ -9,10 +9,17 @@ using namespace std::numbers;
 void UnderSpecifiedRSPlanner::getOmega(const double x0, const double y0,
                                        const double xf, const double yf,
                                        const double r, const double theta,
-                                       double &omega) const {
+                                       double &omega, const bool offset) const {
   // rotate to the local frame
-  const double xn = (xf - x0) * cos(theta) + (yf - y0) * sin(theta) + x0;
-  const double yn = -(xf - x0) * sin(theta) + (yf - y0) * cos(theta) + y0;
+  double xn, yn;
+  if (offset) {
+    xn = (xf - x0) * cos(theta - pi / 2) + (yf - y0) * sin(theta - pi / 2) + x0;
+    yn =
+        -(xf - x0) * sin(theta - pi / 2) + (yf - y0) * cos(theta - pi / 2) + y0;
+  } else {
+    xn = (xf - x0) * cos(theta) + (yf - y0) * sin(theta) + x0;
+    yn = -(xf - x0) * sin(theta) + (yf - y0) * cos(theta) + y0;
+  }
 
   // centers of left and right side circles
   // cxr0 = x0 + r * cos(theta0) with theta0 fixed pi/2 implicit, etc.
