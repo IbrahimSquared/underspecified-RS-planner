@@ -1,6 +1,10 @@
 # Under-specified Reeds-Shepp Planning
 
-[Paper: IEEE T-RO](https://doi.org/10.1109/TRO.2025.3554406)
+[**Paper (IEEE T-RO)**](https://doi.org/10.1109/TRO.2025.3554406)  
+The original published version contains a few minor typos, kindly identified by [@jonghochoi](https://github.com/jonghochoi) in [this GitHub issue](https://github.com/IbrahimSquared/underspecified-RS-planner/issues/3). 
+These have been corrected in the updated version:  
+[**Updated Paper (arXiv)**](https://arxiv.org/abs/2504.05921)  
+*Note: The corrections are purely typographical and do not affect results, methods, or conclusions.*
 
 Consider the scenario where a car-like robot begins at a certain configuration $p_{0} = (x_{0}, y_{0}, \theta_{0})$ in an $N\times{}M$ grid.
 
